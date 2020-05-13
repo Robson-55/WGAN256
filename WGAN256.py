@@ -36,9 +36,12 @@ from matplotlib import pyplot
 
 """**Gets color images from a folder of images that is in the same directory as the python file**"""
 
+current_dir=os.getcwd()
+data_url=os.path.join(base_url, 'Ukiyoe')
+output_url=os.path.join(base_url, 'output')
 #base_url = "C:/Users/RobeR/WGAN256" 
-data_url = "/uploads/Ukiyoe/Ukiyo_e/" 
-output_url = "/output/" 
+#data_url = "/uploads/Ukiyoe/Ukiyo_e/" 
+#output_url = "/output/" 
 
 from os import listdir
 from numpy import asarray
