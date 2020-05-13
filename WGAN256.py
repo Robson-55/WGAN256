@@ -36,7 +36,7 @@ from matplotlib import pyplot
 
 """**Gets color images from a folder of images that is in the same directory as the python file**"""
 
-current_dir=os.getcwd()
+base_url=os.getcwd()
 data_url=os.path.join(base_url, 'Ukiyoe')
 output_url=os.path.join(base_url, 'output')
 #base_url = "C:/Users/RobeR/WGAN256" 
