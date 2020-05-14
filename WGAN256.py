@@ -211,7 +211,7 @@ def generate_fake_samples(generator, latent_dim, n_samples):
 
 import matplotlib
 
-def summarize_performance(step, g_model, latent_dim, n_samples=100):
+def summarize_performance(step, g_model, latent_dim, n_samples=50):
 	# prepare fake examples
 	X, _ = generate_fake_samples(g_model, latent_dim, n_samples)
 	# scale from [-1,1] to [0,1]
