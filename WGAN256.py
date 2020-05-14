@@ -233,7 +233,7 @@ def summarize_performance(step, g_model, latent_dim, n_samples=100):
 
 """**After every 100 epochs it has to print an image which contains 8x8 image generations (the print is a 2048x2048 image containing 64 images)**"""
 
-def summarize_performance_100(step, g_model, latent_dim, n_samples=5):
+def summarize_performance_100(step, g_model, latent_dim, n_samples=10):
 	# prepare fake examples
 	X, _ = generate_fake_samples(g_model, latent_dim, n_samples)
 	# scale from [-1,1] to [0,1]
@@ -259,7 +259,7 @@ def summarize_performance_100(step, g_model, latent_dim, n_samples=5):
 
 """**After every 200 epochs it prints a single image generation**"""
 
-def summarize_performance_200(step, g_model, latent_dim, n_samples=5):
+def summarize_performance_200(step, g_model, latent_dim, n_samples=10):
 	# prepare fake examples
 	X, _ = generate_fake_samples(g_model, latent_dim, n_samples)
 	# scale from [-1,1] to [0,1]
