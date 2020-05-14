@@ -233,7 +233,7 @@ def summarize_performance(step, g_model, latent_dim, n_samples=100):
 
 """**After every 100 epochs it has to print an image which contains 8x8 image generations (the print is a 2048x2048 image containing 64 images)**"""
 
-def summarize_performance_100(step, g_model, latent_dim, n_samples=10):
+def summarize_performance_100(step, g_model, latent_dim, n_samples=100):
 	# prepare fake examples
 	X, _ = generate_fake_samples(g_model, latent_dim, n_samples)
 	# scale from [-1,1] to [0,1]
@@ -259,7 +259,7 @@ def summarize_performance_100(step, g_model, latent_dim, n_samples=10):
 
 """**After every 200 epochs it prints a single image generation**"""
 
-def summarize_performance_200(step, g_model, latent_dim, n_samples=10):
+def summarize_performance_200(step, g_model, latent_dim, n_samples=100):
 	# prepare fake examples
 	X, _ = generate_fake_samples(g_model, latent_dim, n_samples)
 	# scale from [-1,1] to [0,1]
@@ -292,7 +292,7 @@ def plot_history(d1_hist, d2_hist, g_hist):
 
 """**Train the generator and critic**"""
 
-def train(g_model, c_model, gan_model, dataset, latent_dim, n_epochs=5, n_batch=64, n_critic=5):
+def train(g_model, c_model, gan_model, dataset, latent_dim, n_epochs=5, n_batch=32, n_critic=5):
 	# calculate the number of batches per training epoch
 	bat_per_epo = int(dataset.shape[0] / n_batch)
 	# calculate the number of training iterations
